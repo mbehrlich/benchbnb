@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SearchContainer from './search_container';
 import BenchFormContainer from './bench_form_container';
+import SessionFormContainer from './session_form_container';
 
 const AppRouter = () => (
   <Router history={ hashHistory }>
@@ -10,6 +11,8 @@ const AppRouter = () => (
       <IndexRoute component={ SearchContainer } />
     </Route>
     <Route path="/benches/new" component={ BenchFormContainer } />
+    <Route path="/login" component={ SessionFormContainer } />
+    <Route path="/signup" component={ SessionFormContainer } />
   </Router>
 );
 

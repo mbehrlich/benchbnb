@@ -10,7 +10,7 @@ class Api::BenchesController < ApplicationController
       render :bench
     else
       @errors = @bench.errors.full_messages
-      render :errors
+      render json: @errors
     end
   end
 
